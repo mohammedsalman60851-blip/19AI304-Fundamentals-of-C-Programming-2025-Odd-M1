@@ -26,7 +26,22 @@ To build a C program that prints integer, float,character, and string literals o
 ### Step 4: 
    Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    printf("%d\n", 10);
+    printf("%f\n", 10.5);
+    printf("%c\n", 'A');
+    printf("%s\n", "Hello");
+
+    return 0;
+}
 # Output:
+10
+10.500000
+A
+Hello
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -57,7 +72,22 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 6:  
   Stop
 # Program:
+#include <stdio.h>
+
+#define PI 3.14
+
+int main()
+{
+    const int MAX = 100;
+
+    printf("Macro constant PI = %.2f\n", PI);
+    printf("Constant variable MAX = %d\n", MAX);
+
+    return 0;
+}
 # Output:
+Macro constant PI = 3.14
+Constant variable MAX = 100
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -81,8 +111,33 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 5:    
    Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;
+    float b = 20.5;
+    double c = 30.55;
+    char d = 'A';
+
+    printf("Integer: %d\n", a);
+    printf("Float: %.2f\n", b);
+    printf("Double: %.2lf\n", c);
+    printf("Character: %c\n", d);
+
+    return 0;
+}
 # Output:
+Integer: 10
+Float: 20.50
+Double: 30.55
+Character: A
 # Result: 
+Ten
+Twenty point Five
+Thirty point Fifty-Five
+A
+
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd
 # IAPR-1- Module 1 - FoC
@@ -120,9 +175,37 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int a, b;
+
+    scanf("%d %d", &a, &b);
+
+    printf("Addition: %d\n", a + b);
+    printf("Subtraction: %d\n", a - b);
+    printf("Multiplication: %d\n", a * b);
+    printf("Division: %d\n", a / b);
+    printf("Modulus: %d\n", a % b);
+
+    printf("Bitwise AND: %d\n", a & b);
+    printf("Bitwise OR: %d\n", a | b);
+    printf("Bitwise XOR: %d\n", a ^ b);
+
+    return 0;
+}
 # Output:
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+Bitwise AND: 0
+Bitwise OR: 15
+Bitwise XOR: 15
 # Result: 
-Thus, the program was implemented and executed successfully, and the required output was obtained.
+The program successfully performs arithmetic and bitwise operations on two integers and displays the results.
 
 
 # 19AI304-Fundamentals-of-C-Programming-2025-Odd
@@ -165,7 +248,29 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    char ch;
+    scanf("%c", &ch);
+
+    (ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||
+     ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
+     ? printf("Vowel")
+     : ((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z'))
+       ? printf("Consonant")
+       : (ch>='0'&&ch<='9')
+         ? printf("Digit")
+         : printf("Special Symbol");
+
+    return 0;
+}
 # Output:
+input:
+a
+output: 
+Vowel
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
